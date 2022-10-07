@@ -1,5 +1,7 @@
+/*---------------------------------- GOOGLE FONTS ----------------------------------------*/
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
 
+/*----------------------------------- GLOBALES ---------------------------------------------*/
 * {
     margin: 0;
     padding: 0;
@@ -25,6 +27,7 @@ body {
     min-height: 100vh;
 }
 
+/*------------------------------------- ASIDE ----------------------------------------------*/
 .container {
     position: var(--position);
     margin: 50px;
@@ -92,9 +95,9 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 10px;
-    
+    padding-bottom: 10px;  
 }
+
 .contact h2 {
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
     text-align: center;
@@ -143,6 +146,7 @@ body {
 .language ul li {
     list-style: none;
     padding-top: 20px;
+    color: var(--white-color);
 }
 
 .language .percent div {
@@ -153,6 +157,7 @@ body {
     background-color: #03a9f4;
 }
 
+/*---------------------------------------- HEADER ------------------------------------------*/
 .container .rigth_side {
     position: var(--position);
     padding: 40px;
@@ -160,14 +165,15 @@ body {
 }
 
 .header .description {
-    padding: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     letter-spacing: 5px;
 }
 
 .title-header {
     color: var(--color-text);
     font-weight: 900;
-    font-size: 60px;
+    font-size: 70px;
     line-height: 1.4em;
     letter-spacing: 5px;
 }
@@ -189,14 +195,103 @@ a {
     text-decoration: none;
 }
 
-
+/*--------------------------------------- MAIN --------------------------------------------*/
 .title-main {
-    
     line-height: 1.4em;
-    padding-bottom: 10px;
-    padding-top: 20px;
+    padding-bottom: 15px;
+    padding-top: 25px;
     font-weight: 700;
     text-transform: uppercase;
     color: var(--color-text);
 }
- 
+
+.box{
+    display: flex;
+    grid-template-columns: 1fr 3fr;
+    gap: 10px;
+    min-width: 150px;
+}
+
+.year-curso h3 {
+    color: #b5000d;
+    padding-bottom: 10px;
+}
+
+.skills .title-main {
+    padding-bottom: 25px;
+    font-weight: 700;
+}
+
+.skills .box {
+    position: var(--position);
+    width: 100%;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.skills .box h4 {
+    text-transform: uppercase;
+    padding-bottom: 20px;
+    font-weight: 600;
+}
+
+.percent {
+    position: var(--position);
+    width: 100%;
+    height: 10px;
+    background-color: #b5000d;
+ }
+
+.percent div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: var(--title-color);
+}
+
+.box2 {
+    display: flex;
+    grid-template-columns: 1fr 2fr;
+    gap: 25px;
+    min-width: 150px;
+}
+
+.interest ul {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+
+.interest ul li {
+    list-style: none;
+    font-weight: 600;
+    color: #333;
+}
+
+.interest ul li .fa {
+    color: var(--title-color);
+    font-size: 18px;
+    width: 20px;
+}
+
+/*---------------------------------------- MEDIAQUERIES --------------------------------*/
+
+@media (max-width: 1000px){
+   .container {
+    margin: 10px;
+    grid-template-columns: repeat(1,1fr);
+   }
+}
+
+@media (max-width: 600px) {
+    .box {
+        flex-direction: column;
+    }
+    .box2 {
+        flex-direction: column;
+    }
+    
+}
