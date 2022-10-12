@@ -190,6 +190,9 @@ body {
     padding: 5px;
     width: 50px;
 }
+.icon {
+    color: var(--title-color);
+}
 
 a {
     text-decoration: none;
